@@ -1,0 +1,1 @@
+phantom = Npm.require('phantom');
