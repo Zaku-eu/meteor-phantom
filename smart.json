@@ -1,5 +1,5 @@
 {
-  "name": "phantomjs",
+  "name": "phantom",
   "description": "This is a tiny phantom wrapper",
   "homepage": "https://github.com/zaku-eu/meteor-phantom",
   "author": "Tamino Martinius <dev@zaku.eu>",
