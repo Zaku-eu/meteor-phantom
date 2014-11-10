@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'This is a tiny phantom wrapper',
-  version: '0.9.0_2',
+  version: '0.9.0_3',
   git: 'https://github.com/zaku-eu/meteor-phantom.git'
 });
 
@@ -11,12 +11,11 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.0');
-  api.use('webapp', 'server');
-  api.addFiles('zaku:phantom.js');
+  api.addFiles('zaku:phantom.js', 'server');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('zaku:phantom');
-  api.addFiles('zaku:phantom-tests.js');
+  api.addFiles('zaku:phantom-tests.js', 'server');
 });
