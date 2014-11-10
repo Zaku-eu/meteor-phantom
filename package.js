@@ -1,7 +1,12 @@
 Package.describe({
   summary: 'This is a tiny phantom wrapper',
-  version: '0.9.0',
+  version: '0.9.0_1',
   git: 'https://github.com/zaku-eu/meteor-phantom.git'
+});
+
+Npm.depends({
+  "shoe": "https://github.com/bluekeyes/shoe/tarball/45429420fece517b6df9ffc856aa5ba661a10741",
+  "phantom": "0.6.1"
 });
 
 Package.onUse(function(api) {
