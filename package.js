@@ -1,7 +1,5 @@
 Package.describe({
-  summary: 'This is a tiny phantom wrapper',
-  version: '0.9.0_3',
-  git: 'https://github.com/zaku-eu/meteor-phantom.git'
+    summary: "This is a tiny phantom wrapper"
 });
 
 Npm.depends({
@@ -9,13 +7,8 @@ Npm.depends({
   "phantom": "0.6.1"
 });
 
-Package.onUse(function(api) {
-  api.versionsFrom('METEOR@0.9.0');
-  api.addFiles('zaku:phantom.js', 'server');
-});
-
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('zaku:phantom');
-  api.addFiles('zaku:phantom-tests.js', 'server');
+// even though we're serving minified, dynamic loading would be nice
+Package.on_use(function (api) {
+  api.export('phantom');
+  api.add_files('phantom.js', 'server');
 });
